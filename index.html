@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic & Editable Resume Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Resume Builder</h1>
+
+    <!-- Resume Form -->
+    <form id="resumeForm">
+      <div>
+             
+        <label for="username"> Resume URL: </label>
+        <input type = "text" id ="username" name = "username" placeholder = "Enter Your username" required/><br/>
+
+        <label for="name"> Name: </label>
+        <input type = "text" id ="name" name = "name" placeholder = "Enter Your name" required/><br/>
+
+        <label for="email"> Email: </label>
+        <input type = "email" id = "email" name = "email" placeholder = "Enter Your Email" required/><br>
+
+        <label for="adress"> Adress: </label>
+        <input type = "adresaa" id ="adress" name = "adress" placeholder="Enter Your Adress" required/><br>
+
+        <label for="phone"> Phone: </label>
+        <input type = "tel" id ="phone" name = "phone" placeholder="Enter Your PhoneNumber" required/><br>
+      
+                  <!-- Education Section -->
+      <label for="education">Education:</label>
+      <input type="text" id="education" name="education" placeholder="Enter Your education " required/>
+  
+      <!-- Skills Section -->
+      
+      <label for="skills">Skills</label>
+      <input type="text" id="skills" name="skills" placeholder="e.g., HTML, CSS, JavaScript" required>
+      
+
+      <!-- Experience Section -->
+       
+      
+        <label for="experience">Experience</label>
+        <input type = "text" id="experience" name="experience" placeholder="Enter Your Experience" required></textarea>
+
+      </div>
+      
+      <button type="submit">Generate Resume</button>
+    </form>
+
+    <!-- Shareable Link Section -->
+    <div>
+      <h3>Shareable Link:</h3>
+      <input type="text" id="shareableLink" readonly>
+      <button id="copyLink">Copy Link</button>
+    </div>
+
+    <!-- Dynamic Resume Section -->
+    <div id="resumeOutput" class="resume-output">
+      <h2>Your Resume</h2>
+      <div id="outputName" contenteditable="true"></div>
+      <div id="outputEmail" contenteditable="true"></div>
+      <div id="outputPhone" contenteditable="true"></div>
+      <ul id="outputSkills" contenteditable="true"></ul>
+      <div id="outputExperience" contenteditable="true"></div>
+    </div>
+  </div>
+
+  <script src="dist/script.js"></script>
+</body>
+</html>
